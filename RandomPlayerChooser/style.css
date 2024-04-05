@@ -126,3 +126,25 @@ html {
  /* font-weight: 600; */
  margin-bottom: -40%;
 }
+/* Default styles */
+
+/* Add your existing styles here */
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+ .container {
+  padding: 20px; /* Add padding for better spacing */
+ }
+
+ .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .input-box input {
+  width: 100%;
+  margin-bottom: 10px;
+ }
+}
