@@ -1,39 +1,40 @@
 // Array of names
 const names = [
- "Killerass",
- "Smartass",
- "Madass",
- "Badass",
- "Bhabani",
- "Chikubhai07",
- "Knightass"
+  "Killerass",
+  "Smartass",
+  "Madass",
+  "Badass",
+  "Anupbhai07",
+  "Chikubhai07",
+  "Knightass",
+  "PXD||Nite",
 ];
 
-// Function to generate random names
-function generateRandomNames() {
- let name1, name2;
- do {
-  // Get random indexes
-  const index1 = Math.floor(Math.random() * names.length);
-  let index2;
-  do {
-   index2 = Math.floor(Math.random() * names.length);
-  } while (index2 === index1); // Ensure index2 is different from index1
+// Function to generate random names for a specific div
+function generateRandomNames(inputIds) {
+  const generatedNames = new Set();
 
-  // Get names using random indexes
-  name1 = names[index1];
-  name2 = names[index2];
- } while (
-  name1 === document.getElementById("playerOneInput").value &&
-  name2 === document.getElementById("playerTwoInput").value
- ); // Ensure both names are changed
-
- // Set names in input fields
- document.getElementById("playerOneInput").value = name1;
- document.getElementById("playerTwoInput").value = name2;
+  inputIds.forEach((id) => {
+    let name;
+    do {
+      const index = Math.floor(Math.random() * names.length);
+      name = names[index];
+    } while (generatedNames.has(name));
+    generatedNames.add(name);
+    document.getElementById(id).value = name;
+  });
 }
 
-// Event listener for the Generate button
-document
- .getElementById("generateBtn")
- .addEventListener("click", generateRandomNames);
+// Event listeners for each Generate button
+document.getElementById("generateBtn1").addEventListener("click", () => {
+  generateRandomNames([
+    "playerOneInput1",
+    "playerOneInput2",
+    "playerTwoInput1",
+    "playerTwoInput2",
+  ]);
+});
+
+document.getElementById("generateBtn2").addEventListener("click", () => {
+  generateRandomNames(["playerOneInput3", "playerTwoInput3"]);
+});
