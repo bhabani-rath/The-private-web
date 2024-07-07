@@ -7,6 +7,7 @@ const names = [
   "Anupbhai07",
   "Chikubhai07",
   "PXD||Nite",
+  "Bhabani",
 ];
 
 // Function to generate random names for a specific set of input IDs
