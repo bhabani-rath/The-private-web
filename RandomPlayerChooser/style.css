@@ -10,7 +10,7 @@ html {
 }
 .container {
   width: 1440px;
-  height: 650px;
+  height: 950px;
   margin: 0 auto;
   background: #e0e0e0;
   margin-top: 2%;
@@ -41,7 +41,7 @@ html {
 #playerTwoInput1,
 #playerTwoInput2,
 #playerOneInput3,
-#playerTwoInput3 {
+#playerTwoInput3,input {
   width: 250px;
   height: 52px;
   font-size: 1rem;

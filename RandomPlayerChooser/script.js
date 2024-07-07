@@ -10,7 +10,7 @@ const names = [
   "PXD||Nite",
 ];
 
-// Function to generate random names for a specific div
+// Function to generate random names for a specific set of input IDs
 function generateRandomNames(inputIds) {
   const generatedNames = new Set();
 
@@ -30,11 +30,22 @@ document.getElementById("generateBtn1").addEventListener("click", () => {
   generateRandomNames([
     "playerOneInput1",
     "playerOneInput2",
+    "playerOneInput3",
+    "playerOneInput4",
     "playerTwoInput1",
     "playerTwoInput2",
+    "playerTwoInput3",
+    "playerTwoInput4",
   ]);
 });
 
 document.getElementById("generateBtn2").addEventListener("click", () => {
-  generateRandomNames(["playerOneInput3", "playerTwoInput3"]);
+  generateRandomNames([
+    "playerOneInput5",
+    "playerOneInput6",
+    "playerOneInput7",
+    "playerTwoInput5",
+    "playerTwoInput6",
+    "playerTwoInput7",
+  ]);
 });
