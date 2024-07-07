@@ -6,7 +6,6 @@ const names = [
   "Badass",
   "Anupbhai07",
   "Chikubhai07",
-  "Knightass",
   "PXD||Nite",
 ];
 
@@ -26,26 +25,37 @@ function generateRandomNames(inputIds) {
 }
 
 // Event listeners for each Generate button
-document.getElementById("generateBtn1").addEventListener("click", () => {
-  generateRandomNames([
-    "playerOneInput1",
-    "playerOneInput2",
-    "playerOneInput3",
-    "playerOneInput4",
-    "playerTwoInput1",
-    "playerTwoInput2",
-    "playerTwoInput3",
-    "playerTwoInput4",
-  ]);
-});
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("generateBtn1").addEventListener("click", () => {
+    generateRandomNames([
+      "playerOneInput1",
+      "playerOneInput2",
+      "playerTwoInput1",
+      "playerTwoInput2",
+    ]);
+  });
 
-document.getElementById("generateBtn2").addEventListener("click", () => {
-  generateRandomNames([
-    "playerOneInput5",
-    "playerOneInput6",
-    "playerOneInput7",
-    "playerTwoInput5",
-    "playerTwoInput6",
-    "playerTwoInput7",
-  ]);
+  document.getElementById("generateBtn2").addEventListener("click", () => {
+    generateRandomNames([
+      "playerOneInput3",
+      "playerOneInput4",
+      "playerTwoInput3",
+      "playerTwoInput4",
+    ]);
+  });
+
+  document.getElementById("generateBtn3").addEventListener("click", () => {
+    generateRandomNames(["playerOneInput5", "playerTwoInput5"]);
+  });
+
+  document.getElementById("generateBtn4").addEventListener("click", () => {
+    generateRandomNames([
+      "playerOneInput6",
+      "playerOneInput7",
+      "playerOneInput8",
+      "playerTwoInput6",
+      "playerTwoInput7",
+      "playerTwoInput8",
+    ]);
+  });
 });
